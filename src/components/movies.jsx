@@ -116,9 +116,6 @@ class Movies extends Component {
               } = this.state;
         const { user } = this.props;      
 
-        if(count === 0)
-
-        return <p>There are no movies in the database</p>;
 
        const { totalCount, data : movies} = this.getPageData();
 
@@ -142,7 +139,7 @@ class Movies extends Component {
                    <p>Showing results of {totalCount} movies</p>
 
             <SearchBox value={searchQuery} onChange={this.handleSearch}/>
-            <MoviesTable 
+            <MoviesTable   
                         movies = { movies }
                         sortColumn = {sortColumn}
                         onLike = {this.handleLike}
